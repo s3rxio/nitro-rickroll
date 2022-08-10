@@ -1,0 +1,29 @@
+.perk {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 32px;
+  text-align: center;
+  border-radius: 8px;
+
+  color: var(--white);
+  background-color: var(--dark-not-black);
+  &__title {
+    font-size: 24px;
+  }
+
+  &__description {
+    font-size: 16px;
+    margin-top: 12px;
+
+    line-height: 24px;
+  }
+
+  &__image {
+    height: auto;
+    margin-top: 20px;
+  }
+}

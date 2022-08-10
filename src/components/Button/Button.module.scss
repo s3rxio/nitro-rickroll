@@ -1,0 +1,69 @@
+.button {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+  line-height: 24px;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all .2s;
+  &__pill {
+    background-color: var(--brand);
+    border-radius: 24px;
+
+    padding: 0 8px;
+    font-size: 12px;
+    text-decoration: unset;
+    line-height: inherit;
+  }
+
+  &:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+  }
+
+  &_small {
+    border-radius: 40px;
+
+    font-size: 14px;
+    padding: 7px 16px;
+  }
+
+  &_large {
+    border-radius: 28px;
+
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+
+  &_white {
+    background-color: var(--white);
+    color: var(--black);
+
+    &:hover {
+      color: var(--brand);
+    }
+  }
+
+  &_dark {
+    background-color: var(--not-quite-black);
+    color: var(--white);
+
+    &:hover {
+      background: hsl(220, .7%, 22.9%);
+    }
+  }
+
+  &_brand {
+    background-color: var(--brand);
+    color: var(--white);
+
+    &:hover {
+      background: hsl(235, 86.1%, 71.8%);
+    }
+  }
+}
+
+
+
