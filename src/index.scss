@@ -16,6 +16,10 @@
   --ekko-red: #de2761;
 
   --section-spacing: 120px;
+
+  @media (max-width: 1200px) {
+    --section-spacing: 80px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,4 +55,12 @@ h2 {
 [class*="__container"] {
   max-width: 1180px;
   margin: auto;
+
+  @media (max-width: 1200px) {
+      margin: 0 50px;
+  }
+  
+  @media (max-width: 425px) {
+    margin: 0 25px;
+  }
 }

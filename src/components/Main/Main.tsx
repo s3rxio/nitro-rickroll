@@ -6,6 +6,7 @@ import BackgroundWebm from "../../media/background.webm";
 import Header from "../Header/Header";
 import RickRollButton from "../RickRollButton/RickRollButton";
 import Button from "../Button/Button";
+import Wumpus from "../../media/wumpus.png";
 
 const Main: React.FC = () => {
     return (
@@ -13,7 +14,10 @@ const Main: React.FC = () => {
             <Header />
             <div className={styles.main__container}>
                 <div className={styles.main__info}>
-                    <img src={Logo} alt="Discord Nitro" className={styles.main__title} width={300} height={122}/>
+                    <div className={styles["main__title-wrapper"]}>
+                        <img src={Wumpus} alt="Wumpus" className={styles.main__wumpus}/>
+                        <img src={Logo} alt="Discord Nitro" className={styles.main__title} width={300} height={122}/>
+                    </div>
 
                     <span className={styles.main__text}>
                         Улучшите свои возможности в Discord за небольшую ежемесячную плату. Сделайте свои эмодзи ещё лучше, загружайте большие файлы, дайте буст любимым серверам и получите множество других бонусов.

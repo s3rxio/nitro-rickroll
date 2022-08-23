@@ -80,11 +80,13 @@ const About: React.FC = () => {
                 <div className={styles.about__buy}>
                     <h2>Давайдавайдавайдавайдавай!</h2>
 
-                    <Button link="/#" size="large" color="dark">
-                        99,99$ в год
-                    </Button>
+                    <div className={styles.about__buttons__wrapper}>
+                        <Button link="/#" size="large" color="dark">
+                            99,99$ в год
+                        </Button>
 
-                    <RickRollButton />
+                        <RickRollButton />
+                    </div>
                 </div>
             </div>
         </section>

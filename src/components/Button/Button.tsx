@@ -24,7 +24,8 @@ const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
             <span style={props.pill ? {textDecoration: "line-through"} : {}}>
                 {props.children}
             </span>
-            {props.pill &&
+            {
+                props.pill &&
                 <span className={styles.button__pill} >
                     Бесплатно
                 </span>
