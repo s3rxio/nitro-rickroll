@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Perk.module.scss';
 
-export interface IPerkProps {
+export interface PerkProps {
     title: string;
     className?: string
     description: string;
@@ -9,7 +9,7 @@ export interface IPerkProps {
     imageURL: string;
 }
 
-export const Perk: React.FC<IPerkProps> = (props: IPerkProps) => {
+export const Perk: React.FC<PerkProps> = (props: PerkProps) => {
     return (
         <div className={`${styles.perk} ${props.className!}`}>
             <div className={styles.perk__title}>
