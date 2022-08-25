@@ -14,7 +14,7 @@ const Main: React.FC = () => {
 
     return (
         <section className={styles.main}>
-            <Modal title="Стоп стоп стоп!" content="К сожалению в данный момент что то сломалось и вы не можете приобрести Discord Nitro на год. Как хорошо что можно бесплатно получить Discord Nitro на месяц! ;)" isOpen={modalIsOpen} setIsOpen={setModalIsOpen}/>
+            <Modal title="Стоп стоп стоп!" content="К сожалению, в данный момент, что то сломалось и вы не можете приобрести Discord Nitro на год. Как хорошо что можно бесплатно получить Discord Nitro на месяц! ;)" isOpen={modalIsOpen} setIsOpen={setModalIsOpen}/>
 
             <Header />
             <div className={styles.main__container}>

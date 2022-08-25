@@ -62,7 +62,7 @@ const About: React.FC = () => {
 
     return (
         <section className={styles.about}>
-            <Modal title="Стоп стоп стоп!" content="К сожалению в данный момент что то сломалось и вы не можете приобрести Discord Nitro на год. Как хорошо что можно бесплатно получить Discord Nitro на месяц! ;)" isOpen={modalIsOpen} setIsOpen={setModalIsOpen}/>
+            <Modal title="Стоп стоп стоп!" content="К сожалению, в данный момент, что то сломалось и вы не можете приобрести Discord Nitro на год. Как хорошо что можно бесплатно получить Discord Nitro на месяц! ;)" isOpen={modalIsOpen} setIsOpen={setModalIsOpen}/>
 
             <div className={styles.about__container}>
                 <h1 className={styles.about__title}>
