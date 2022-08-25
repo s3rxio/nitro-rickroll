@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./About.module.scss";
-import {Perk, IPerkProps} from "../Perk/Perk";
+import {Perk, PerkProps} from "../Perk/Perk";
 import PerkImage1 from "../../media/perks/perk1.svg";
 import PerkImage2 from "../../media/perks/perk2.svg";
 import PerkImage3 from "../../media/perks/perk3.svg";
@@ -9,10 +9,13 @@ import PerkImage5 from "../../media/perks/perk5.png";
 import PerkImage6 from "../../media/perks/perk6.png";
 import RickRollButton from "../RickRollButton/RickRollButton";
 import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
 
 const About: React.FC = () => {
     const normalizeClassName = (className: string) => `${styles.about__perk} ${className}`;
-    const perks: IPerkProps[] = [
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const perks: PerkProps[] = [
         {
             title: "Улучшенные эмодзи",
             description: "Собирайте или создавайте собственные пользовательские и анимированные эмодзи.",
@@ -59,6 +62,8 @@ const About: React.FC = () => {
 
     return (
         <section className={styles.about}>
+            <Modal title="Стоп стоп стоп!" content="К сожалению, в данный момент, что то сломалось и вы не можете приобрести Discord Nitro на год. Как хорошо что можно бесплатно получить Discord Nitro на месяц! ;)" isOpen={modalIsOpen} setIsOpen={setModalIsOpen}/>
+
             <div className={styles.about__container}>
                 <h1 className={styles.about__title}>
                     <span style={{fontWeight: 900}}>Discord Nitro</span> сделает использование голосовых, текстовых и видеочатов ещё приятнее.
@@ -78,13 +83,17 @@ const About: React.FC = () => {
                 </div>
 
                 <div className={styles.about__buy}>
-                    <h2>Давайдавайдавайдавайдавай!</h2>
+                    <div className={styles.about__buy__container}>
+                        <h2>Давайдавайдавайдавайдавай!</h2>
 
-                    <Button link="/#" size="large" color="dark">
-                        99,99$ в год
-                    </Button>
+                        <div className={styles.about__buttons__wrapper}>
+                            <Button link="/#" size="large" color="dark" onClick={(e) => {e.preventDefault(); setModalIsOpen(true)}}>
+                                99,99$ в год
+                            </Button>
 
-                    <RickRollButton />
+                            <RickRollButton />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

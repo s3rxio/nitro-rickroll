@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-export interface IButtonProps {
+export interface ButtonProps {
     size: 'small' | 'large';
     color: 'white' | 'dark' | 'brand';
 
@@ -9,10 +9,11 @@ export interface IButtonProps {
     target?: React.HTMLAttributeAnchorTarget;
     pill?: boolean;
 
+    onClick?: React.MouseEventHandler<HTMLAnchorElement>;
     children?: React.ReactNode;
 }
 
-const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
+const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     return (
         <a
             href={props.link}
@@ -20,11 +21,13 @@ const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
                 `${styles.button} ${styles[`button_${props.size}`]} ${styles[`button_${props.color}`]}`
             }
             target={props.target}
+            onClick={props.onClick}
         >
             <span style={props.pill ? {textDecoration: "line-through"} : {}}>
                 {props.children}
             </span>
-            {props.pill &&
+            {
+                props.pill &&
                 <span className={styles.button__pill} >
                     Бесплатно
                 </span>
